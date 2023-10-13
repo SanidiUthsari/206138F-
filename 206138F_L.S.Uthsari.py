@@ -18,6 +18,7 @@ def check_age(age):
             print("Invalid input.")
     else:
         print("You cannot vote, Come back when you're 18 :).")
+
 try:
     age = int(input("Enter your age: "))
     check_age(age)
@@ -25,6 +26,9 @@ except ValueError:
     print("Invalid input. Please enter a valid age.")
 
 print("Thank you!")
+
+
+
 
 
 
