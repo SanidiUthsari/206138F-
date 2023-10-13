@@ -1,23 +1,31 @@
+
 print("welcome to the voting system :)")
 name = input("Enter your name:")
 print("Hello",name)
 
 
 minimum_Voting_age = 18 
-age = int(input("Enter your age:"))
 
-if age >= minimum_Voting_age :
-    print("You can vote")
-    vote = input("do you prefer to vote?").upper()
+def check_age(age):
+    if age >= minimum_Voting_age :
+        print("You are eligible to vote!")
+        vote = input("Do you want to vote?" ).upper()
+        if vote == "YES":
+            print("Great! You can cast your vote.")
+        elif vote == "NO":
+            print("Okay, maybe next time!")
+        else:
+            print("Invalid input.")
+    else:
+        print("You cannot vote, Come back when you're 18 :).")
 
-    while vote not in["YES","NO"]:
-        print("invalid input :(")
-        vote = input("do you prefer to vote?").upper()
-    if vote == "YES":
-        print("Great! you can elect.")
-    elif vote == "NO":
-        print(" may be next time :)")
-    
+
+age = input("Enter your age:")
+
+if age.isdigit():
+    age = int(age)
+    check_age(age)
 else:
-    print("You cannot vote, come back when you are 18 :)")
+    print("Invalid input. Please enter a valid age.")
 
+print("Thank you!")
