@@ -26,7 +26,7 @@ except ValueError:
     print("Invalid input. Please enter a valid age.")
 
 print("Thank you!")
-print("Try Again")
+print("Next voter...")
 
 
 
