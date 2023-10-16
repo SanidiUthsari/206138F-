@@ -13,7 +13,7 @@ for candidate in candidates:
 
 vote = input("Enter the name of the candidate you want to vote for (or 'exit' to end voting): ").strip()
 
-while vote.lower() != "exit":
+while vote.lower() != "Exit":
     if vote in candidates:
         candidate_votes[vote] += 1
         print(f"Thank you for voting for {vote}!\n")
